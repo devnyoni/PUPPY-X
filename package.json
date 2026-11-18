@@ -1,5 +1,5 @@
 {
-  "name": "KEITH-MD",
+  "name": "PUPPY-X",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
@@ -14,12 +14,12 @@
   "keywords": [
     "bot",
     "Baileys",
-    "keith-Md",
+    "puppy-x",
     "whatsapp",
     "whatsapp-bot",
-    "keithkeizzah"
+    "devnyoni"
   ],
-  "author": "keithkeizzah",
+  "author": "devnyoni",
   "license": "ISC",
   "dependencies": {
     "@whiskeysockets/baileys": "npm:gifted-baileys@2.0.0",
