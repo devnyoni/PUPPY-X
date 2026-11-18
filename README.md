@@ -1,8 +1,8 @@
- <h1 align="center">PUPPY-X</h1>
+<h1 align="center">KEITH-MD</h1>
 
 <div style="text-align: center;">
   <a href="https://apiskeith.top">
-    <img src="" alt="01" border="0" /></a>
+    <img src="https://i.ibb.co/PsZnb9NH/0d81ac6b1fb1.jpg" alt="01" border="0" /></a>
   <hr style="margin-top: 20px; margin-bottom: 20px;"/>
 </div>
 
@@ -12,7 +12,7 @@
       <b>FORK</b><br>
       Fork the repository to customize and use the bot for your needs.
       <br><br>
-      <a href="fork">
+      <a href="https://github.com/devnyoni/PUPPY-X/fork">
         <img src="https://img.shields.io/badge/FORK-this%20repo-purple" alt="FORK ALPHA" width="150">
       </a>
     </td>
@@ -28,7 +28,7 @@
   <tr>
     <td align="center">
       <b>download zip</b><br>
-      Download latest puppy x zip.
+      Download latest PUPPY-X zip.
       <br><br>
       <a href="https://github.com/devnyoni/PUPPY-X/archive/refs/heads/main.zip">
         <img src="https://img.shields.io/badge/Download-ZIP-blue" alt="Download zip" width="200">
@@ -38,20 +38,19 @@
       <b>DEPLOY</b><br>
       Deploy the bot to your server or platform of choice using the button below.
       <br><br>
-      <a href="https://keithsite.lol/heroku">
+      <a href="https://heroku.com/deploy?template=https://github.com/devnyoni/PUPPY-X">
         <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku">
       </a>
     </td>
   </tr>
-  <!-- New row for puppy Hosting -->
   <tr>
     <td colspan="2" align="center">
-      <b>PUPPY HOSTING</b><br>
-      Host your bot on puppy's official hosting platform.
+      <b>KEITH HOSTING</b><br>
+      Host your bot on Keith's official hosting platform.
       <br><br>
       <a href="https://hosting.keithsite.lol">
         <img src="https://img.shields.io/badge/Host%20Now-hosting.keithsite.lol-brightgreen" alt="Keith Hosting" width="300">
       </a>
     </td>
   </tr>
-</table> 
+</table>
