@@ -1,8 +1,8 @@
-<h1 align="center">KEITH-MD</h1>
+<h1 align="center">PUPPY-X</h1>
 
 <div style="text-align: center;">
   <a href="https://apiskeith.top">
-    <img src="https://i.ibb.co/PsZnb9NH/0d81ac6b1fb1.jpg" alt="01" border="0" /></a>
+    <img src="" alt="01" border="0" /></a>
   <hr style="margin-top: 20px; margin-bottom: 20px;"/>
 </div>
 
