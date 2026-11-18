@@ -29,12 +29,13 @@ function getCategoryCommands(categories, selectedNumber) {
 
   return {
     text:
-      `╭────「 ${selectedCategory} 」──┈⊷𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭\n` +
-      `│◦➛╭───────────────\n` +
-      commandsInCategory.map((cmd, idx) => `│◦➛ ${idx + 1}. ${cmd}`).join("\n") +
-      `\n│◦➛╰─────────────\n` +
-      `╰──────────────┈⊷\n\n` +
-      `🔢 Total: ${commandsInCategory.length} commands`,
+      `╭══════════════════✦\n` +
+      `│ 📂 *CATEGORY:* ${selectedCategory}\n` +
+      `├══════════════════✦\n` +
+      commandsInCategory.map((cmd, idx) => `│ 📌 ${idx + 1}. ${cmd}`).join("\n") +
+      `\n├══════════════════✦\n` +
+      `│ 📊 *Total Commands:* ${commandsInCategory.length}\n` +
+      `╰══════════════════✦`,
     category: selectedCategory
   };
 }
@@ -42,11 +43,13 @@ function getCategoryCommands(categories, selectedNumber) {
 keith({
   pattern: "menu",
   category: "general",
-  description: "Interactive category-based menu"
+  description: "Interactive category-based menu for PUPPY-X"
 },
 async (from, client, conText) => {
-  const { mek, pushName, botname, botPic, sourceUrl } = conText;
+  const { mek, pushName, sourceUrl } = conText;
   const userId = mek.sender;
+  const botname = "PUPPY-X";
+  const botPic = "https://h.uguu.se/JaoRuOdMRHkV.jpg";
 
   if (activeMenus.has(userId)) {
     const { handler } = activeMenus.get(userId);
@@ -58,27 +61,30 @@ async (from, client, conText) => {
 
   const categories = Object.keys(commandList);
 
-  const menuText = `╰►Hey, ${pushName}
-╭───〔  *${botname}* 〕──────┈⊷𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭
-├──────────────
-│✵│▸ 𝐓𝐎𝐓𝐀𝐋 𝐏𝐋𝐔𝐆𝐈𝐍𝐒: ${totalCommands}
-╰──────────────────────⊷
+  const menuText = `👋 Hello *${pushName}*,
 
-╭───◇ *𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗜𝗘𝗦* ◇──────┈⊷
-│「 Reply with a number below 」
-${categories.map((cat, i) => `> │◦➛ ${i + 1}. ${cat}`).join("\n")}
-╰─────────────────────┈⊷
-`.trim();
+╔══════════════════✦
+║ 🤖 *BOT NAME:* ${botname}
+║ ⚡ *TOTAL PLUGINS:* ${totalCommands}
+║ 👑 *PREFIX:* Interactive
+╚══════════════════✦
+
+╭════  🔥 *MENU CATEGORIES*  ════╮
+│ 💬 *Please reply with a number:*
+├─────────────────────────
+${categories.map((cat, i) => `│  ${i + 1} ➔ ${cat}`).join("\n")}
+╰─────────────────────────╯
+> *💡 Tip: Reply '0' to return to the main menu.*`.trim();
 
   const sentMessage = await client.sendMessage(from, {
     text: menuText,
     contextInfo: {
       mentionedJid: [mek.sender],
       externalAdReply: {
-        title: `${botname} Menu2`,
-        body: `Category-based command explorer`,
+        title: `${botname} - Modern Interactive Menu`,
+        body: `Explore ${totalCommands} powerful commands!`,
         thumbnailUrl: botPic,
-        sourceUrl: sourceUrl,
+        sourceUrl: sourceUrl || "https://github.com",
         mediaType: 1,
         renderLargerThumbnail: true
       }
@@ -98,7 +104,19 @@ ${categories.map((cat, i) => `> │◦➛ ${i + 1}. ${cat}`).join("\n")}
     const selectedNumber = parseInt(userInput);
 
     if (userInput === "0") {
-      await client.sendMessage(from, { text: menuText });
+      await client.sendMessage(from, { 
+        text: menuText,
+        contextInfo: {
+          externalAdReply: {
+            title: `${botname} - Main Menu`,
+            body: `Select a category below`,
+            thumbnailUrl: botPic,
+            sourceUrl: sourceUrl || "https://github.com",
+            mediaType: 1,
+            renderLargerThumbnail: true
+          }
+        }
+      });
       activeMenus.set(userId, {
         sentMessage,
         handler: replyHandler,
@@ -108,13 +126,13 @@ ${categories.map((cat, i) => `> │◦➛ ${i + 1}. ${cat}`).join("\n")}
     }
 
     if (isNaN(selectedNumber) || selectedNumber < 1 || selectedNumber > categories.length) {
-      console.log(`Invalid menu2 input from ${userId}: "${userInput}"`);
+      console.log(`Invalid menu input from ${userId}: "${userInput}"`);
       return;
     }
 
     const { text: commandsText } = getCategoryCommands(categories, selectedNumber);
     if (!commandsText) {
-      console.log(`menu2: No category found for input ${selectedNumber}`);
+      console.log(`menu: No category found for input ${selectedNumber}`);
       return;
     }
 
@@ -123,10 +141,10 @@ ${categories.map((cat, i) => `> │◦➛ ${i + 1}. ${cat}`).join("\n")}
       contextInfo: {
         mentionedJid: [mek.sender],
         externalAdReply: {
-          title: `${categories[selectedNumber - 1]} Commands`,
+          title: `${botname} » ${categories[selectedNumber - 1]}`,
           body: `Total: ${commandList[categories[selectedNumber - 1]]?.length || 0} commands`,
           thumbnailUrl: botPic,
-          sourceUrl: sourceUrl,
+          sourceUrl: sourceUrl || "https://github.com",
           mediaType: 1,
           renderLargerThumbnail: true
         }
