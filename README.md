@@ -2,7 +2,7 @@
 
 <div style="text-align: center;">
   <a href="https://apiskeith.top">
-    <img src="https://i.ibb.co/PsZnb9NH/0d81ac6b1fb1.jpg" alt="01" border="0" /></a>
+    <img src="" alt="01" border="0" /></a>
   <hr style="margin-top: 20px; margin-bottom: 20px;"/>
 </div>
 
@@ -12,7 +12,7 @@
       <b>FORK</b><br>
       Fork the repository to customize and use the bot for your needs.
       <br><br>
-      <a href="https://github.com/kkeizza/Keith/fork">
+      <a href="fork">
         <img src="https://img.shields.io/badge/FORK-this%20repo-purple" alt="FORK ALPHA" width="150">
       </a>
     </td>
