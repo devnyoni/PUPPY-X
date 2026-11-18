@@ -1,4 +1,4 @@
- <h1 align="center">KEITH-MD</h1>
+ <h1 align="center">PUPPY-X</h1>
 
 <div style="text-align: center;">
   <a href="https://apiskeith.top">
@@ -28,9 +28,9 @@
   <tr>
     <td align="center">
       <b>download zip</b><br>
-      Download latest Keith md zip.
+      Download latest puppy x zip.
       <br><br>
-      <a href="https://github.com/kkeizza/Keith/archive/refs/heads/main.zip">
+      <a href="https://github.com/devnyoni/PUPPY-X/archive/refs/heads/main.zip">
         <img src="https://img.shields.io/badge/Download-ZIP-blue" alt="Download zip" width="200">
       </a>
     </td>
@@ -43,11 +43,11 @@
       </a>
     </td>
   </tr>
-  <!-- New row for Keith Hosting -->
+  <!-- New row for puppy Hosting -->
   <tr>
     <td colspan="2" align="center">
-      <b>KEITH HOSTING</b><br>
-      Host your bot on Keith's official hosting platform.
+      <b>PUPPY HOSTING</b><br>
+      Host your bot on puppy's official hosting platform.
       <br><br>
       <a href="https://hosting.keithsite.lol">
         <img src="https://img.shields.io/badge/Host%20Now-hosting.keithsite.lol-brightgreen" alt="Keith Hosting" width="300">
