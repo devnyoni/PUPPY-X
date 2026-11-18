@@ -1,37 +1,33 @@
 {
-  "name": "KEITH-MD",
-  "description": "This is a simple whatsapp bot built with nodejs to make your WhatsApp enjoyable",
-  "keywords": [
-    "bot",
-    "whatsapp",
-    "keith",
-    "whatsapp-stickers",
-    "anime",
-    "whatsapp-bot",
-    "whatsapp-sticker-bot",
-    "whatsapp-botto",
-    "baileys",
-    "baileys-md",
-    "md-bot"
-  ],
-  "website": "https://github.com/Keithkeizzah/KEITH-MD#readme",
-  "repository": "https://github.com/Keithkeizzah/KEITH-MD.git",
-  "logo": "https://i.imgur.com/dAtHp2k.jpeg",
-  "success_url": "/",
-  "env": {
-    "OWNER_NUMBER": {
-      "description": "Put any phone numbers you want to be bot owner without + or spaces \",\" Ex: 254748387615, 254796299159",
-      "required": false
-    },
-    "SESSION": {
-      "description": "add your session id here",
-      "required": true
-    }
-  },
-  "buildpacks": [
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
-    }
-  ],
-  "stack": "heroku-24"
+"name": "PUPPY-X",
+"description": "WhatsApp bot built with Node.js to make your WhatsApp enjoyable.",
+"keywords": [
+"bot",
+"whatsapp",
+"puppy-x",
+"whatsapp-bot",
+"baileys",
+"baileys-md",
+"md-bot"
+],
+"website": "https://github.com/devnyoni/PUPPY-X",
+"repository": "https://github.com/devnyoni/PUPPY-X",
+"logo": "https://h.uguu.se/JaoRuOdMRHkV.jpg",
+"success_url": "/",
+"env": {
+"OWNER_NUMBER": {
+"description": "Put your phone number without + or spaces. Example: 2557XXXXXXXX",
+"required": false
+},
+"SESSION": {
+"description": "Add your WhatsApp session ID here.",
+"required": true
+}
+},
+"buildpacks": [
+{
+"url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+}
+],
+"stack": "heroku-24"
 }
